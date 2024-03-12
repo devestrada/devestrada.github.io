@@ -386,10 +386,6 @@ header .content .img img {
     scrollbar-gutter: stable;
 }
 
-.modal .contenido::-webkit-scrollbar {
-    width: 0;
-}
-
 .modal .contenido p {
     width: 70%;
     margin-top: 10px;
@@ -418,11 +414,11 @@ header .content .img img {
 }
 
 .modal .vista .escritorio {
-    width: 70%;
+    width: 60%;
 }
 
 .modal .vista .movil {
-    width: 30%;
+    width: 40%;
 }
 
 .modal .vista h3 {
@@ -438,7 +434,7 @@ header .content .img img {
 .modal .vista video {
     width: 100%;
     margin-top: 10px;
-    box-shadow: 0 0 5px #c3c3c3;
+    box-shadow: 0 0 10px #c3c3c3;
 }
 
 .modal .vista.movil video {
