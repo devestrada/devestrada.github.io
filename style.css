@@ -1,0 +1,827 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;300;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --font1: 'Geologica', sans-serif;
+    --font2: 'Roboto', sans-serif;
+}
+
+section {
+    width: 100%;
+    padding: 50px 60px;
+    font-family: var(--font2);
+    overflow: hidden;
+}
+/**/
+body {
+    font-family: var(--font2);
+}
+/* Header */
+header {
+    padding: 50px;
+    width: 100%;
+    height: 100vh;
+    border-bottom: 1px solid #1F1F1F;
+    overflow: hidden;
+}
+
+header nav {
+    position: relative;
+    font-family: var(--font1);
+    font-size: 1.2em;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .logo img {
+    height: 25px;
+    margin-left: 25px;
+}
+
+header nav .links {
+    padding-right: 30px;
+}
+
+header nav .links a {
+    text-decoration: none;
+    color: #000;
+    margin-right: 20px;
+    padding: 5px 10px;
+    transition: .2s;
+}
+
+header nav .links a:hover {
+    background: #000;
+    color: #fff;
+    box-shadow: 5px 5px 0 #fff, 7px 7px 0 #000,
+        -5px -5px 0 #fff, -7px -7px 0 #000;
+}
+
+header nav .links .btn-labs {
+    background: #000;
+    color: #fff;
+}
+
+header nav .links .btn-labs:hover {
+    box-shadow: none;
+    background: linear-gradient(45deg, #631a00, #000, #390f00, #000, #631a00);
+    background-size: 600% 600%;
+
+    animation: bg_subtitle 5s ease infinite
+}
+
+/*Menu responsivo*/
+header nav .menu {
+    display: none;
+}
+
+header nav .menu__info {
+    display: none;
+}
+/**/
+header .content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header .content .desc {
+    width: 40%;
+    height: 70%;
+    padding: 20px;
+}
+
+header .content .desc .titulo {
+    position: relative;
+    font-size: 2em;
+    font-family: var(--font1);
+}
+
+header .content .desc .titulo h2 {
+    position: relative;
+    font-weight: 800;
+    padding: 0 10px;
+}
+
+header .content .desc .titulo p {
+    position: relative;
+    font-weight: 600;
+    color: #fff;
+    padding: 5px 10px;
+
+    background: linear-gradient(45deg, #631a00, #000, #390f00, #000, #631a00);
+    background-size: 600% 600%;
+
+    animation: bg_subtitle 10s ease infinite;
+}
+
+@keyframes bg_subtitle {
+    0%{background-position: 0% 87%}
+    50%{background-position: 100% 14%}
+    100%{background-position: 0% 87%}
+}
+
+header .content .desc .resumen {
+    margin-top: 40px;
+    font-size: 1.2em;
+}
+/**/
+header .content .desc .scroll {
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+header .content .desc .scroll .mouse {
+    margin-top: 20px;
+    width: 20px;
+    height: 30px;
+    border: 2px solid #000;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+header .content .desc .scroll .mouse .boton {
+    margin-top: 3px;
+    width: 6px;
+    height: 10px;
+    background: #000;
+    border-radius: 20px;
+    animation: scrolling 2s infinite ease-in;
+}
+
+@keyframes scrolling {
+    0% {transform: translateY(0);}
+    30% {transform: translateY(5px);}
+    100% {transform: translateY(0);}
+}
+/**/
+header .content .img {
+    position: relative;
+    width: 60%;
+    height: 70%;
+}
+
+header .content .img img {
+    position: absolute;
+    width: 125%;
+    top: 0;
+    left: 20px;
+}
+/* Skills */
+.skills {
+    display: flex;
+    border-bottom: 1px solid #1F1F1F;
+    background: #ebebeb;
+}
+
+.skills h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.skills .BxImg {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.skills .BxImg img {
+    width: 240px;
+    height: 240px;
+}
+
+.skills .desc {
+    width: 60%;
+    padding-left: 20px;
+}
+
+.skills .desc h3 {
+    margin: 10px 0;
+}
+
+.skills .desc .habilidad {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skills .desc .habilidad {
+    display: flex;
+    gap: 20px;
+}
+
+.skills .desc .habilidad .icon {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+    padding: 5px;
+    background: #fff;
+    border-radius: 1px;
+    font-size: 0.9em;
+    transition: .5s;
+    box-shadow: 5px 5px 0 #ebebeb, 7px 7px 0 #000;
+}
+
+.skills .desc .habilidad .icon span {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.skills .desc .habilidad .icon .i {
+    font-size: 3em;
+    color: var(--iconColor)
+}
+
+.skills .desc .habilidad .icon p {
+    font-weight: 300;
+}
+/* Portafolio */
+.portafolio h2 {
+    font-size: 1.5em;
+}
+
+.portafolio p {
+    margin: 10px 0;
+}
+/* Cards */
+.cards {
+    margin: 10px 0;
+    padding: 10px 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    overflow: auto;
+    overflow: overlay;
+    scrollbar-gutter: stable;
+}
+
+.cards::-webkit-scrollbar {
+    width: 0;
+}
+
+.cards .card {
+    position: relative;
+    margin: 0 15px;
+    width: 250px;
+    min-width: 250px;
+    height: 240px;
+    border: 3px solid #000;
+    box-shadow: 5px 5px 0 #fff, 7px 7px 0 #000,
+        -5px -5px 0 #fff, -7px -7px 0 #000;
+}
+
+.cards .card h4 {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    color: #fff;
+    padding: 5px 10px;
+    background: #000;
+    border: 3px solid #fff;
+    z-index: 10;
+}
+
+.cards .card .tec {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 5px;
+    font-size: 1.2em;
+    z-index: 10;
+}
+
+.cards .card img {
+    position: relative;
+    width: 100%;
+    height: 120px;
+}
+
+.cards .card p {
+    position: relative;
+    font-size: 0.8em;
+    color: #000;
+    padding: 5px 7px;
+    margin-top: -2px;
+}
+
+.cards .card .btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    font-size: .9em;
+    padding: 7px 12px;
+    border: none;
+    background: #000;
+    z-index: 10;
+    cursor: pointer;
+    transition: .2s;
+}
+/* Modal */
+.modal {
+    position: fixed;
+    top: -150%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    transition: top 0.3s ease-in-out;
+    z-index: 100;
+}
+
+.modal.active {
+    top: 0;
+}
+
+.modal .btn {
+    position: absolute;
+    top: 15px;
+    right: 54px;
+    color: #fff;
+    background: #000;
+    border: 5px solid #fff;
+    padding: 0 15px;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.modal .contenido {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    padding: 2em;
+    background: #fff;
+    border: 3px solid #000;
+    box-shadow: 5px 5px 0 #fff, 7px 7px 0 #000,
+        -5px -5px 0 #fff, -7px -7px 0 #000;
+        overflow: auto;
+    overflow: overlay;
+    scrollbar-gutter: stable;
+}
+
+.modal .contenido::-webkit-scrollbar {
+    width: 0;
+}
+
+.modal .contenido p {
+    width: 70%;
+    margin-top: 10px;
+}
+
+.modal .contenido a {
+    color: #0073ff;
+}
+
+.modal .titulo {
+    font-size: 1.3em;
+    margin: 15px 0;
+}
+
+.modal .vistas {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.modal .vistas .vista {
+    position: relative;
+    padding: 10px;
+    border: 1px solid #b8b8b8;
+    text-align: center;
+}
+
+.modal .vista .escritorio {
+    width: 70%;
+}
+
+.modal .vista .movil {
+    width: 30%;
+}
+
+.modal .vista h3 {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    padding: 0 10px;
+    transform: translateX(-50%);
+    display: inline-block;
+    background: #fff;
+}
+
+.modal .vista video {
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 0 0 5px #c3c3c3;
+}
+
+.modal .vista.movil video {
+    width: 50%;
+}
+
+/* Contacto */
+.contacto {
+    height: 500px;
+    display: flex;
+    padding-bottom: 0;
+    justify-content: center;
+    align-items: flex-end;
+    border-bottom: 3px solid #000;
+    background: #ebebeb;
+}
+
+.contacto .info {
+    width: 20%;
+    height: 80%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    background: linear-gradient(45deg, #250a00, #000, #250a00, #000, #250a00);
+    background-size: 600% 600%;
+
+    animation: bg_cont 15s ease infinite;
+}
+
+@keyframes bg_cont {
+    0%{background-position: 0% 87%}
+    50%{background-position: 100% 14%}
+    100%{background-position: 0% 87%}
+}
+
+.contacto .info h2 {
+    margin: 10px 0;
+}
+
+.contacto .info .icon {
+    margin: 10px 0 5px 0;
+    font-size: 1.6em;
+}
+
+.contacto .info .link {
+    width: 50%;
+    margin: 20px 0;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 3px solid #fff;
+    text-decoration: none;
+    color: #fff;
+    transition: .2s;
+    font-weight: 500;
+}
+
+.contacto .info img {
+    width: 100%;
+    margin: 20px 0;
+    background: #fff;
+    padding: 10px 20px;
+}
+
+.contacto .info .link:hover {
+    color: #000;
+    background: #fff;
+}
+/**/
+.contacto .formulario {
+    width: 40%;
+    height: 100%;
+    border: 3px solid #000;
+    border-bottom: none;
+    background: #fff;
+}
+
+.contacto .formulario .form {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+}
+
+.form .inputs {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.form .inputs .name {
+    flex: 1 0 120px;
+}
+
+.form .inputs .email {
+    flex: 1 0 120px;
+}
+
+.form .inputs .message {
+    flex: 1 1 100%;
+}
+
+.form .inputs .btn {
+    flex: 1 1 100%;
+    color: #fff;
+    background: #000;
+    border-radius: 0;
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.form .inputs div label {
+    text-transform: uppercase;
+    font-size: .9em;
+    font-weight: 400;
+}
+
+.form .inputs div label::after {
+    content: "*";
+    color: red;
+    margin-left: 5px;
+    text-transform: uppercase;
+}
+
+.form .inputs div input {
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    border-bottom: 2px solid #000;
+    outline: none;
+    font-size: 1em;
+}
+
+.form .inputs div textarea {
+    width: 100%;
+    height: 160px;
+    margin: 10px 0;
+    padding: 8px;
+    border: 2px solid #000;
+    outline: none;
+    font-size: 1em;
+    font-family: var(--font2);
+    resize: none;
+}
+
+/* RESPONSIVO */
+@media only screen and (max-width:875px) {
+
+    header nav .links.active {
+        right: 0;
+    }
+
+    header nav .links {
+        position: fixed;
+        top: 0;
+        right: -200%;
+        width: 90%;
+        height: 100vh;
+        padding: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        background: #fff;
+        border-left: 3px solid #000;
+        z-index: 100;
+        transition: .2s;
+        overflow: hidden;
+    }
+
+    header nav .links a {
+        font-size: 1.2em;
+        padding: 10px 20px;
+        background: #000;
+        color: #fff;
+        box-shadow: 5px 5px 0 #fff, 7px 7px 0 #000,
+            -5px -5px 0 #fff, -7px -7px 0 #000;
+    }
+
+    .links #close-menu {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        color: #fff;
+        background: #000;
+        padding: 0 10px;
+        font-size: 2em;
+        cursor: pointer;
+        border: none;
+    }
+
+    header nav #open-menu {
+        display: block;
+        font-size: 2em;
+    }
+
+    header nav #open-menu.active::after {
+        content: 'X';
+        position: fixed;
+        z-index: 200;
+        right: 50px;
+    }
+
+    .menu__info.active {
+        position: absolute;
+        bottom: 100px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu__info .icon {
+        margin: 10px 0 5px 0;
+        font-size: 1.6em;
+    }
+
+    .menu__info .link {
+        width: 200px;
+        margin: 20px 0;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-weight: 500;
+    }
+
+    .menu__info img {
+        width: 60%;
+        margin: 20px 0;
+        background: #fff;
+        padding: 10px 20px;
+    }
+    /*Header*/
+    header .content .desc {
+        width: 65%;
+    }
+
+    header .content .img {
+        width: 35%;
+    }
+
+    header .content .img img {
+        width: 1000px;
+        height: 90%;
+        top: 0;
+        left: 0;
+    }
+    /* Modal */
+    .modal .contenido {
+        padding: 1em;
+    }
+
+    .modal .contenido p {
+        width: 100%;
+    }
+    /*Contacto*/
+    .contacto .info {
+        width: 35%;
+    }
+
+    .contacto .formulario {
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    section {
+        padding: 10px 20px;
+    }
+    /*Cabecera*/
+    header {
+        padding: 10px;
+        height: auto;
+    }
+
+    header nav {
+        margin-top: 30px;
+    }
+
+    header #open-menu {
+        margin-right: 25px;
+    }
+
+    header .content {
+        flex-direction: column;
+    }
+
+    header .content .desc {
+        width: 100%;
+        height: auto;
+        margin-top: 50px;
+        padding: 10px;
+    }
+
+    header .content .desc .titulo h2 {
+        padding: 0;
+        font-size: 1.4em;
+    }
+
+    header .content .desc .titulo p {
+        font-size: 1em;
+        font-weight: 500;
+    }
+
+    header .content .img {
+        display: none;
+    }
+    /* Skills */
+    .skills {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 0;
+    }
+
+    .skills .BxImg {
+        display: none;
+    }
+
+    .skills .desc {
+        width: 100%;
+    }
+    /* Portafolio */
+    .portafolio {
+        padding: 30px 20px;
+    }
+    /* Modal */
+    .modal {
+        height: 95vh;
+    }
+
+    .modal .btn {
+        top: 5px;
+        right: 0;
+    }
+
+    .modal .contenido h2 {
+        font-size: 1.2em;
+    }
+
+    .modal .contenido p {
+        font-size: .8em;
+    }
+
+    .modal .titulo {
+        font-size: 1em;
+        margin: 15px 0;
+    }
+
+    .modal .vistas {
+        flex-direction: column;
+    }
+
+    .modal .vista h3 {
+        font-size: 1em;
+    }
+    /* Contacto */
+    .contacto {
+        height: 80vh;
+        padding-top: 30px;
+        flex-direction: column-reverse;
+    }
+    .contacto .info {
+        width: 100%;
+        height: 40%;
+        padding: 20px;
+    }
+    .contacto .info img {
+        display: none;
+    }
+    .contacto .formulario {
+        width: 100%;;
+        height: 60%;
+    }
+    .contacto .formulario .form {
+        padding: 20px;
+    }
+}

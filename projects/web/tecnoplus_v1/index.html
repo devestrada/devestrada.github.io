@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link rel="stylesheet" href="./preload.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>TECNOPLUS CONCORDIA</title>
+</head>
+
+<body>
+
+    <!--PRE-LOADER-->
+    <div class="preloader">
+        <h3>Cargando página</h3>
+        <div class="load1">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="load2">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!--/PRE-LOADER-->
+
+    <header>
+        <a href="./index.html" class="logo">TECNOPLUS <span>CONCORDIA</span></a>
+        <div class="menuToggle" onclick="toggleMenu()"></div>
+        <ul class="navegation">
+            <li><a href="./index.html" onclick="toggleMenu()">INICIO</a></li>
+            <li><a href="#services" onclick="toggleMenu()">SERVICIOS</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">CONTACTO</a></li>
+        </ul>
+    </header>
+
+    <section class="banner" id="banner">
+        <div class="content">
+            <h2>Bienvenidos a TECNOPLUS CONCORDIA.</h2>
+            <p>Servicio técnico profesional para telefonía móvil y equipos de cómputo.</p>
+            <a href="#about" class="btn">¡vamos!</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="row">
+            <div class="col50">
+                <h2 class="titleText"><span>N</span>osotros</h2>
+                <p>Hoy en día nos vemos en la necesidad de tener dispositivos inteligentes en nuestras manos, ya sea un computador de mesa, un portátil o dispositivos de telefonía móvil.<br>El uso intensivo, la humedad y los golpes son algunos factores que
+                    Con el tiempo degradan nuestros dispositivos, por ese motivo es importante realizar mantenimiento periódicamente para evitar futuras fallas.</p><br>
+                <p>En <b>TECNOPLUS CONCORDIA</b>, te ofrecemos los mejores servicios de mantenimiento y reparación para tus equipos de cómputo y dispositivos moviles.</p>
+                </p>
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <img src="./img/nosotros.jpg" alt="nosotros, tecnoplusconcordia">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="title">
+            <h2 class="titleText"><span>S</span>ervicios</h2>
+            <p>Nuestro principal servicios son el mantenimiento y reparación de dispositivos móviles y equipos de cómputo.</p>
+        </div>
+        <div class="content">
+            <div class="box" onclick="toggleMovil()">
+                <div class="imgBx">
+                    <img src="./img/mobiles.svg" alt="Imagen_Dispositivos_moviles">
+                </div>
+                <div class="text">
+                    <h3>telefonía móvil y dispositivos moviles</h3>
+                </div>
+            </div>
+
+            <div id="poputMovil">
+                <div class="close" onclick="toggleMovil()"></div>
+                <div class="container">
+                    <h2><span>S</span>ervicios Moviles</h2>
+                    <ul>
+                        <li>Mantenimiento preventivo y correctivo.</li>
+                        <li>Reparación a nivel físico y lógico.</li>
+                        <li>Actualización del sistema.</li>
+                        <li>Descarga de aplicaciones.</li>
+                    </ul>
+                    <span class="btn" onclick="toggleMovil()">cerrar</span>
+                </div>
+            </div>
+
+            <div class="box" onclick="togglePc()">
+                <div class="imgBx">
+                    <img src="./img/computo.svg" alt="Imagen_Equipos_computo">
+                </div>
+                <div class="text">
+                    <h3>equipos de cómputo</h3>
+                </div>
+            </div>
+
+            <div id="poputPc">
+                <div class="close" onclick="togglePc()"></div>
+                <div class="container">
+                    <h2><span>S</span>ervicios de Cómputo</h2>
+                    <ul>
+                        <li>Mantenimiento preventivo y correctivo.</li>
+                        <li>Reparación a nivel físico y lógico.</li>
+                        <li>Instalación de sistemas operativos (Windows y GNU/LINUX).</li>
+                        <li>Actualización de sistemas operativos (Windows y GNU/LINUX).</li>
+                        <li>Descarga de Software.</li>
+                    </ul>
+                    <span class="btn" onclick="togglePc()">cerrar</span>
+                </div>
+            </div>
+
+            <div class="box" onclick="toggleConsole()">
+                <div class="imgBx">
+                    <img src="./img/game.svg" alt="Imagen_Game">
+                </div>
+                <div class="text">
+                    <h3>consolas de videojuegos</h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="poputConsole">
+            <div class="close" onclick="toggleConsole()"></div>
+            <div class="container">
+                <h2><span>S</span>ervicios de Consolas de Videojuegos</h2>
+                <ul>
+                    <li>Mantenimiento preventivo y correctivo.</li>
+                    <li>Reparación a nivel físico.</li>
+                    <li>Descerga de videojuegos para consola chipeada.</li>
+                </ul>
+                <span class="btn" onclick="toggleConsole()">cerrar</span>
+            </div>
+        </div>
+
+        <div class="title">
+            <span class="btn" onclick="toggleServices()">más servicios</span>
+        </div>
+    </section>
+
+    <!--PlusServices-->
+
+    <section id="poputServices">
+        <div class="close" onclick="toggleServices()"></div>
+        <div class="container">
+            <h2><span>O</span>tros servicios</h2>
+            <ul>
+                <li>Instalación de sistemas operativos (Windows y GNU/LINUX)</li>
+                <li>Actualización de sistemas operativos (Windows y GNU/LINUX)</li>
+                <li>Descerga de música, juegos y películas.</li>
+                <li></li>
+            </ul>
+            <span class="btn" onclick="toggleServices()">cerrar</span>
+        </div>
+    </section>
+
+    <!--/PlusServices-->
+
+
+    <section class="contact" id="contact">
+        <div class="imgBx">
+            <img src="./img/bg2.jpg" alt="contacto">
+        </div>
+        <div class="content">
+            <div class="contentBx">
+                <h2><span>C</span>ontacto</h2>
+                <div class="itemBx">
+                    <div class="img"><img src="./img/ws.svg"></div>
+                    <a href="https://wa.me/573148765966" target="_bank">314 876 5966</a>
+                </div>
+                <div class="itemBx">
+                    <div class="img"><img src="./img/ml.svg"></div>
+                    <a href="mailto:tecnoplusconcordia@gmail.com" target="_bank">tecnoplusconcordia@gmail.com</a>
+                </div>
+                <div class="itemBx">
+                    <div class="img"><img src="./img/map.svg"></div>
+                    <a href="#">Cra. 20 #22-11 Concordia (Ant).</a>
+                </div>
+                <div class="mapBx"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.9048152191565!2d-75.9087359180949!3d6.046860204566667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e466ffc8c5d7907%3A0x903a3cdb3e8c70db!2sCra.%2020%20%2322-11%2C%20Concordia%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1603478336874!5m2!1ses-419!2sco"
+                        frameborder="0" class="map" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <h3>Síguenos</h3>
+                <ul class="sci">
+                    <li>
+                        <a href="https://wa.me/573148765966" target="_bank"><img src="./img/ws.svg"></a>
+                    </li>
+                    <li>
+                        <a href="https://fb.me/tecnoplusconcordia" target="_bank"><img src="./img/fb.svg"></a>
+                    </li>
+                    <li>
+                        <a href="https://m.me/tecnoplusconcordia" target="_bank"><img src="./img/ms.svg"></a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="copy">
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="./img/logo.jpg" alt="tecnoplusconcordia">
+                </div>
+                <div class="text">
+                    <p><b>&copy 2020</b> | Todos los derechos reservados.</p>
+                    <p>Página web desarollada por: <a href="https://fb.me/crissark55" target="_bank">Cristian Estrada.</a></p><br>
+                    <p><span>Concordia, Antioquia, Colombia.</span></p>
+                </div>
+            </div>
+            <div class="box ">
+                <div class="horario ">
+                    <h4><span>H</span>orario de atención</h4>
+                    <p>Lunes a Viernes <b>9</b>:00am - <b>5</b>:00pm</p>
+                    <p>Sábado y Domingo <b>8</b>:00am - <b>6</b>:00pm</p>
+                    <p>Miércoles y festivos no hay servicio.</p>
+                </div>
+                <div class="social ">
+                    <a href="https://fb.me/tecnoplusconcordia " target="_bank "><i class="fab fa-facebook "></i></a>
+                    <a href="https://bit.ly/2N9Czn0 " target="_bank "><i class="fab fa-whatsapp "></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./script.js "></script>
+    <script src="https://kit.fontawesome.com/3db66388ed.js " crossorigin="anonymous "></script>
+</body>
+
+</html>

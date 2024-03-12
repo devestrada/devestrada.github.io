@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <title>Portafolio Web | Cristian E</title>
+</head>
+
+<body>
+    <!-- cabecera -->
+    <header>
+        <nav>
+            <a href="./index.html" class="logo">
+                <img src="./img/logo.png" alt="Logo //DevEstrada">
+            </a>
+            <div class="links" id="menu-links">
+                <a href="#habilidades">Hacerca de</a>
+                <a href="#portafolio">Portafolio</a>
+                <a href="#contacto">Contacto</a>
+                <a href="./laboratorio/index.html" class="btn-labs" target="_blank">Laboratorios</a>
+
+                <div class="menu__info" id="menu-info">
+                    <ion-icon name="mail-outline" class="icon"></ion-icon>
+                    <p>devestrada.contacto@gmail.com</p>
+                    <a class="link" href="https://www.linkedin.com/in/cestradaaraque/" target="_blank">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                        <p>LinkedIn</p>
+                    </a>
+                    <img src="./img/logo.png" alt="Logo DevEstrada">
+                    <p>&copy; DevEstrada</span></p>
+                </div>
+            </div>
+            <!-- Responsivo -->
+            <div class="menu" id="open-menu">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+        </nav>
+
+        <div class="content">
+            <div class="desc">
+                <div class="titulo">
+                    <h2>Cristian Estrada</h2>
+                    <p>Desarrollador Web</p>
+                </div>
+                <div class="resumen">
+                    <p>Desarrollo de páginas web completas y funcionales con la última tecnología de lenguajes de
+                        etiquetado HTML5 y CSS3, y lenguajes de programación JavaScript, PHP e incorporación de bases de
+                        datos con MySQL.</p>
+                </div>
+                <div class="scroll">
+                    <p>Vamos!</p>
+                    <div class="mouse">
+                        <div class="boton"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="img">
+                <img src="./img/header.webp" alt="Imagen de la cabecera">
+            </div>
+        </div>
+    </header>
+    <!-- habilidades -->
+    <section class="skills" id="habilidades">
+
+        <div class="BxImg">
+            <img src="./img/cristian_e.webp" alt="Imagen de perfil">
+        </div>
+
+        <div class="desc">
+            <div class="texto">
+                <h2>Hacerca de</h2>
+                <p>Egresado del SENA como técnico en programación de software y tecnólogo en sistemas, actualmente estoy
+                    cursando la Ingeniería de Sistemas.</p>
+                <p>La programación y los videojuegos son mis aficiones favoritas</p>
+            </div>
+            <h3>Conocimientos</h3>
+            <div class="habilidad">
+                <div class="icon" style="--iconColor: #e34c26">
+                    <span>HTML</span>
+                    <i class="fa-brands fa-html5 i"></i>
+                    <p>Avanzado</p>
+                </div>
+                <div class="icon" style="--iconColor: #264de4">
+                    <span>CSS</span>
+                    <i class="fa-brands fa-css3-alt i"></i>
+                    <p>Avanzado</p>
+                </div>
+                <div class="icon" style="--iconColor: #f0db4f">
+                    <span>JavaScript</span>
+                    <i class="fa-brands fa-js i"></i>
+                    <p>Intermedio</p>
+                </div>
+                <div class="icon" style="--iconColor: #4A548C">
+                    <span>PHP</span>
+                    <i class="fa-brands fa-php i"></i>
+                    <p>Intermedio</p>
+                </div>
+                <div class="icon" style="--iconColor: #1D3640">
+                    <span>BD</span>
+                    <i class="fa-solid fa-database i"></i>
+                    <p>Intermedio</p>
+                </div>
+                <div class="icon" style="--iconColor: #DC3E16">
+                    <span>Java</span>
+                    <i class="fa-brands fa-java i"></i>
+                    <p>Básico</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- proyectos -->
+    <section class="portafolio" id="portafolio">
+        <h2>Portafolio</h2>
+
+        <p>Cuento con experiencia como programador independiente en proyectos personales, los cuales han sido grandes
+            retos que disfrute realizarlos.</p>
+        <!-- Cards -->
+        <h3><ion-icon name="caret-forward-outline"></ion-icon> Páginas web | Aplicativos web</h3>
+
+        <div class="cards">
+
+            <div class="card" id="card_lab">
+                <h4>App Laboratorio</h4>
+                <div class="tec">
+                    <i class="fa-brands fa-html5 i"></i>
+                    <i class="fa-brands fa-css3-alt i"></i>
+                    <i class="fa-brands fa-js i"></i>
+                </div>
+                <img src="./img/lab.webp" alt="Imagen del aplicativo web Laboratorio">
+                <p>Aplicativo web de laboratorios de mantenimiento de equipos de cómputo y fundamentos de cableado
+                    estructurado.</p>
+                <button class="btn" data-target="#modal1" title="Abrir modal">Más información</button>
+            </div>
+
+            <div class="card" id="card_tecnoplus">
+                <h4>Web Tecnoplus</h4>
+                <div class="tec">
+                    <i class="fa-brands fa-html5 i"></i>
+                    <i class="fa-brands fa-css3-alt i"></i>
+                    <i class="fa-brands fa-js i"></i>
+                </div>
+                <img src="./img/tecnoplus.webp" alt="Imagen de la página web Tecnoplus">
+                <p>Página web informativa referente a local de reparación de celulares y computadoras, la cual
+                    cuenta con 2 versiones diferentes de presentación de interfaz.</p>
+                <button class="btn" data-target="#modal2" title="Abrir modal">Más información</button>
+            </div>
+
+        </div>
+        <!-- otros proyectos -->
+        <h3><ion-icon name="caret-forward-outline"></ion-icon> Otros proyectos</h3>
+        <!-- Swiper -->
+        <div class="cards">
+
+            <div class="card" id="card_bus">
+                <h4>Super Transporte</h4>
+                <div class="tec">
+                    <i class="fa-brands fa-php i"></i>
+                    <i class="fa-brands fa-css3-alt i"></i>
+                    <i class="fa-brands fa-js i"></i>
+                    <i class="fa-solid fa-database i"></i>
+                </div>
+                <img src="./img/bus.webp" alt="Imagen del proyecto Super Transporte">
+                <p>Aplicativo web el cual consiste en automatizar la elección del tipo de vehículo según la cantidad
+                    de pasajeros a viajar.</p>
+                <button class="btn" data-target="#modal3" title="Abrir modal">Más información</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Modales-->
+    <div class="modal labs" id="modal1">
+        <button class="btn close-modal" title="Cerrar modal">&times;</button>
+        <div class="contenido">
+            <h2>Aplicación web | Laboratorio virtual</h2>
+            <p>Laboratorios dedicados para la simulación de ensamble y desensamble de los componentes de computadoras y
+                celulares, adicional un laboratorio de practica de fundamentos de cableado estructurado. Puedes acceder al laboratorio desde <a href="https://devestrada.github.io/laboratorio/index.html"
+                    target="_blank">aquí.</a></p>
+            <h3 class="titulo"><ion-icon name="images-outline"></ion-icon> Vista previa de la página</h3>
+            <div class="vistas">
+                <div class="vista escritorio">
+                    <h3>Escritorio</h3>
+                    <video autoplay muted playsinline loop>
+                        <source src="./img/vid_lab.mp4" type="video/mp4">
+                        Navegador no compatible con videos HTML5
+                    </video>
+                </div>
+                <div class="vista movil">
+                    <h3>Dispositivo móvil</h3>
+                    <video autoplay muted playsinline loop>
+                        <source src="./img/vid_lab_mobile.mp4" type="video/mp4">
+                        Navegador no compatible con videos HTML5
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal tecnoplus" id="modal2">
+        <button class="btn close-modal" title="Cerrar modal">&times;</button>
+        <div class="contenido">
+            <h2>Página web | Tecnoplus Concordia</h2>
+            <p>Página web desarrollada para negocio de reparación de celulares y computadoras, en donde se muestra toda la información de interes. Puedes acceder a las páginas desde aquí <a href="https://devestrada.github.io/projects/web/tecnoplus_v1/"
+                    target="_blank">Tecnoplus v1</a> - <a href="https://devestrada.github.io/projects/web/tecnoplus_v2/"
+                    target="_blank">Tecnoplus v2</a></p>
+            <h3 class="titulo"><ion-icon name="images-outline"></ion-icon> Vista previa de la página #1</h3>
+            <div class="vistas">
+                <div class="vista escritorio">
+                    <h3>Escritorio</h3>
+                    <video autoplay muted playsinline loop>
+                        <source src="./img/tecnoplus_v1.mp4" type="video/mp4">
+                        Navegador no compatible con videos HTML5
+                    </video>
+                </div>
+                <div class="vista movil">
+                    <h3>Dispositivo móvil</h3>
+                    <video autoplay muted playsinline loop>
+                        <source src="./img/tecnoplus_v1_mobile.mp4" type="video/mp4">
+                        Navegador no compatible con videos HTML5
+                    </video>
+                </div>
+            </div>
+            <h3 class="titulo"><ion-icon name="images-outline"></ion-icon> Vista previa de la página #2</h3>
+            <div class="vistas">
+                <div class="vista escritorio">
+                    <h3>Escritorio</h3>
+                    <video autoplay muted playsinline loop>
+                        <source src="./img/tecnoplus_v2.mp4" type="video/mp4">
+                        Navegador no compatible con videos HTML5
+                    </video>
+                </div>
+                <div class="vista movil">
+                    <h3>Dispositivo móvil</h3>
+                    <video autoplay muted playsinline loop>
+                        <source src="./img/tecnoplus_v2_mobile.mp4" type="video/mp4">
+                        Navegador no compatible con videos HTML5
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal bus" id="modal3">
+        <button class="btn close-modal" title="Cerrar modal">&times;</button>
+        <div class="contenido">
+
+            <p>Modal en desarrollo - PROYECTO BUS </p>
+        </div>
+    </div>
+
+    <!-- contacto -->
+    <section class="contacto" id="contacto">
+
+        <div class="info">
+            <h2>Contacto</h2>
+            <ion-icon name="mail-outline" class="icon"></ion-icon>
+            <p>devestrada.contacto@gmail.com</p>
+            <a class="link" href="https://www.linkedin.com/in/cestradaaraque/" target="_blank">
+                <ion-icon name="logo-linkedin"></ion-icon>
+                <p>LinkedIn</p>
+            </a>
+            <img src="./img/logo.png" alt="Logo DevEstrada">
+            <p>&copy; DevEstrada - <span id="year"></span></p>
+        </div>
+        <div class="formulario">
+            <form class="form" id="form" action="https://formspree.io/f/xyyqnrlb" method="POST">
+                <h3>¿Cómo puedo ayudarte?</h3>
+                <div class="inputs">
+                    <div class="name">
+                        <label for="name">Nombre</label>
+                        <input name="Nombre" required type="text">
+                    </div>
+                    <div class="email">
+                        <label for="email" required>Correo electronico</label>
+                        <input name="Correo" type="text">
+                    </div>
+                    <div class="message">
+                        <label for="message">Mensaje</label>
+                        <textarea name="Mensaje"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar</button>
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+    <!--Scripts - Iconos -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+
+
+    <!--Scripts -->
+    <script src="./script.js"></script>
+
+    </script>
+
+</body>
+
+</html>

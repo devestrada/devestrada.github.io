@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600;700;800;900&display=swap');
+ :root {
+    --main-bg: #ffffff;
+    --main-color: #db2c04;
+    --sec-color: #1c242c;
+}
+
+ ::selection {
+    color: #fff;
+    background: var(--main-color);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* PRE-LOADER */
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+    overflow: hidden;
+    text-align: center;
+    cursor: wait;
+}
+
+.preloader h3 {
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+.load1 {
+    position: relative;
+    width: 80%;
+    height: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.load1 span {
+    position: relative;
+    background: var(--sec-color);
+    width: 50px;
+    height: 2px;
+    animation: span 0.8s ease-in-out infinite alternate;
+}
+
+.load2 {
+    position: relative;
+    width: 80%;
+    height: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.load2 span {
+    position: relative;
+    background: var(--main-color);
+    width: 50px;
+    height: 2px;
+    animation: span 0.8s ease-in-out infinite alternate;
+    animation-delay: 0.2s;
+}
+
+@keyframes span {
+    from {
+        transform: translateX(-30px);
+    }
+    to {
+        transform: translateX(30px);
+    }
+}
+
+.preloader.preload-finish {
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+}
+
+@media (max-width: 991px) {
+    .preloader h3 {
+        font-size: 1.8em;
+    }
+    .load1 span,
+    .load2 span {
+        width: 30px;
+    }
+    header,
+    header.sticky {
+        padding: 10px 20px;
+    }
+    header .navegation {
+        display: none;
+    }
+    header .navegation.active {
+        width: 100%;
+        height: calc(100% - 68px);
+        position: fixed;
+        top: 68px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+    }
+    header .navegation li {
+        margin-left: 0;
+    }
+    header .navegation li a {
+        color: var(--sec-color);
+        font-size: 1.6em;
+    }
+    .menuToggle {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url('./img/menu.svg') no-repeat center;
+        background-size: 30px;
+        filter: invert(1);
+        cursor: pointer;
+        transition: .2s;
+    }
+    .menuToggle.active {
+        background: url('./img/close.svg') no-repeat center;
+        background-size: 30px;
+        filter: invert(1);
+        cursor: pointer;
+        transition: .2s;
+    }
+    header.sticky .menuToggle {
+        filter: invert(0);
+    }
+    section {
+        padding: 20px;
+    }
+    .banner .content h2 {
+        font-size: 3em;
+    }
+    .banner .content p {
+        font-size: 1.2em;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .row .col50 {
+        width: 100%;
+    }
+    .row .col50 .imgBx {
+        height: 300px;
+        margin-top: 20px;
+    }
+    .menu .content {
+        margin-top: 20px;
+    }
+    .menu .content .box {
+        margin: 10px;
+    }
+    .menu .content .box .imgBx {
+        height: 260px;
+    }
+    .titleText {
+        text-align: center;
+    }
+    .title {
+        text-align: center;
+    }
+    .contact .imgBx {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .contact .content {
+        width: 100%;
+        z-index: 1;
+    }
+    .contact .content .contentBx {
+        width: 100%;
+        padding: 40px;
+        margin: 50px;
+        background: rgba(255, 255, 255, .9);
+    }
+    .copy .content {
+        flex-wrap: wrap-reverse;
+    }
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+    .preloader h3 {
+        font-size: 1.8em;
+    }
+    .load1 span,
+    .load2 span {
+        width: 30px;
+    }
+}
+
+@media (max-width:480px) {
+    .preloader h3 {
+        font-size: 1.2em;
+    }
+    .load1 span,
+    .load2 span {
+        width: 15px;
+    }
+}

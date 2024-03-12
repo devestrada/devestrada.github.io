@@ -1,0 +1,758 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600;700;800;900&display=swap');
+ :root {
+    --main-bg: #ffffff;
+    --main-color: #db2c04;
+    --sec-color: #1c242c;
+}
+
+ ::selection {
+    color: #fff;
+    background: var(--main-color);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+p {
+    font-size: 1.1em;
+    font-weight: 400;
+    color: var(--sec-color);
+}
+
+
+/* HEADER */
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('./img/bg.jpg') no-repeat center / cover;
+}
+
+.banner .content {
+    max-width: 900px;
+    text-align: center;
+}
+
+.banner .content h2 {
+    font-size: 4em;
+    color: #fff;
+}
+
+.banner .content p {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.btn {
+    font-size: 1em;
+    color: #fff;
+    background: var(--main-color);
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border-radius: 20px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .5s;
+}
+
+header.sticky {
+    background: #fff;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .05);
+}
+
+header .logo {
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 1.8em;
+    text-decoration: none;
+}
+
+header .logo span {
+    color: #fff;
+    font-weight: 300;
+}
+
+header.sticky .logo span {
+    color: var(--sec-color);
+}
+
+header .navegation {
+    position: relative;
+    display: flex;
+}
+
+header .navegation li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+header .navegation li a {
+    text-decoration: none;
+    font-weight: 400;
+    color: #fff;
+    transition: .2s;
+}
+
+header.sticky .navegation li a {
+    color: var(--sec-color);
+    transition: .2s;
+}
+
+header .navegation li a:hover {
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+
+/* ABOUT */
+
+section {
+    padding: 100px;
+}
+
+.row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row .col50 {
+    position: relative;
+    width: 48%;
+    text-align: justify;
+}
+
+.titleText {
+    color: var(--sec-color);
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.titleText span {
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.row .col50 .imgBx {
+    position: relative;
+    width: 100%;
+    /*min-height: 300px;*/
+    height: 100%;
+}
+
+.row .col50 .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* SERVICES */
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.services {
+    background: rgba(0, 0, 0, .08);
+}
+
+.services .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.services .content .box {
+    width: 450px;
+    margin: 20px;
+    border: 5px solid #fff;
+    background: #fff;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, .09);
+    cursor: pointer;
+}
+
+.services .content .box .imgBx {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.services .content .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+
+.services .content .box:hover .imgBx img {
+    transform: scale(1.05);
+    object-fit: cover;
+}
+
+.services .content .box .text {
+    background: #fff;
+    padding: 15px 0 5px;
+    text-align: center;
+}
+
+.services .content .box .text h3 {
+    font-weight: 700;
+    color: var(--sec-color);
+    text-transform: uppercase;
+    transition: 1s;
+}
+
+.services .content .box:hover .text h3 {
+    font-weight: 800;
+    color: var(--main-color);
+}
+
+
+/* POPUT SERVICES */
+
+.services.active {
+    pointer-events: none;
+    user-select: none;
+}
+
+#poputServices,
+#poputMovil,
+#poputPc,
+#poputConsole {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    padding: 20px;
+    box-shadow: 0 5px 50px rgba(0, 0, 0, .30);
+    border-radius: 10px;
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h2 {
+    text-align: center;
+    color: var(--sec-color);
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.container h2 span {
+    color: var(--main-color);
+    font-size: 1.5em;
+}
+
+#poputServices.active,
+#poputMovil.active,
+#poputPc.active,
+#poputConsole.active {
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#poputServices .close,
+#poputMovil .close,
+#poputPc .close,
+#poputConsole .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+    border-radius: 50%;
+    background: url(./img/close.svg) center no-repeat;
+    cursor: pointer;
+}
+
+#poputServices img {
+    width: 200px;
+}
+
+
+/* CONTACT */
+
+.contact {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.contact .imgBx {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.contact .imgBx:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(225deg, var(--main-color), var(--sec-color));
+    z-index: 1;
+    mix-blend-mode: screen;
+}
+
+.contact .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact .content {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .content .contentBx {
+    width: 70%;
+}
+
+.contact .content .contentBx h2 {
+    color: var(--sec-color);
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.contact .content .contentBx h2 span {
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.contact .content .contentBx .itemBx {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: .5s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+
+.contact .content .contentBx .itemBx:hover {
+    border-right: 1px solid var(--sec-color);
+    border-bottom: 1px solid var(--sec-color);
+}
+
+.contact .content .contentBx .itemBx .img {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--main-color);
+    border-radius: 10px;
+    border: 4px solid #fff;
+}
+
+.contact .content .contentBx .itemBx .img img {
+    width: 100%;
+    height: 100%;
+    transform: scale(0.7);
+    filter: invert(1);
+}
+
+.contact .content .contentBx .itemBx a {
+    position: relative;
+    top: 0;
+    left: 60px;
+    display: inline-block;
+    color: var(--sec-color);
+    padding: 4px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.contact .content .contentBx .mapBx {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    margin-bottom: 20px;
+}
+
+.contact .content .contentBx .mapBx .map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #999;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.contact .content .contentBx .mapBx .map:hover {
+    border: 1px solid var(--sec-color);
+}
+
+.contact .content .contentBx h3 {
+    color: var(--sec-color);
+    text-align: center;
+    font-weight: 500;
+    margin: 10px 0 10px
+}
+
+.contact .content .contentBx .sci {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .content .contentBx .sci li {
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--sec-color);
+    border-radius: 50%;
+    margin: 0 7px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.contact .content .contentBx .sci li:hover {
+    background: var(--main-color);
+}
+
+.contact .content .contentBx .sci li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.contact .content .contentBx .sci li a img {
+    width: 100%;
+    height: 100%;
+    filter: invert(1);
+    transform: scale(0.6);
+}
+
+
+/* COPY */
+
+.copy {
+    background: var(--sec-color);
+    border-top: 5px solid var(--main-color);
+}
+
+.copy .text p {
+    color: #fff;
+    font-size: .9em;
+    font-weight: 300;
+}
+
+.copy .text span {
+    color: var(--main-color);
+    font-weight: 500;
+}
+
+.copy .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.copy .content .box {
+    width: 350px;
+    margin: 0 20px;
+}
+
+.copy .content .box .imgBx {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .08);
+}
+
+.copy .content .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .8);
+    object-fit: cover;
+}
+
+.copy .content .box .text {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.copy .content .box .text p a {
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.copy .content .box .text p b {
+    color: var(--main-color);
+}
+
+.copy .content .box .horario h4 {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.copy .content .box .horario span {
+    color: var(--main-color);
+    font-size: 1.6em;
+}
+
+.copy .content .box .horario b {
+    color: var(--main-color);
+    font-size: 1.2em;
+}
+
+.copy .content .box .horario p {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.copy .content .box .social {
+    margin-top: 10px;
+    padding-top: 5px;
+    text-align: center;
+    border-top: 1px solid #999;
+}
+
+.copy .content .box .social a {
+    color: #fff;
+    padding-right: 5px;
+    font-size: 2.3em;
+    transition: .5s
+}
+
+.copy .content .box .social a:hover {
+    color: var(--main-color);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+    header,
+    header.sticky {
+        padding: 10px 20px;
+    }
+    header .navegation {
+        display: none;
+    }
+    header .navegation.active {
+        width: 100%;
+        height: calc(100% - 68px);
+        position: fixed;
+        top: 68px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+    }
+    header .navegation li {
+        margin-left: 0;
+    }
+    header .navegation li a {
+        color: var(--sec-color);
+        font-size: 1.6em;
+    }
+    .menuToggle {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url('./img/menu.svg') no-repeat center;
+        background-size: 30px;
+        filter: invert(1);
+        cursor: pointer;
+        transition: .2s;
+    }
+    .menuToggle.active {
+        background: url('./img/close.svg') no-repeat center;
+        background-size: 30px;
+        filter: invert(1);
+        cursor: pointer;
+        transition: .2s;
+    }
+    header.sticky .menuToggle {
+        filter: invert(0);
+    }
+    section {
+        padding: 20px;
+    }
+    .banner .content h2 {
+        font-size: 3em;
+    }
+    .banner .content p {
+        font-size: 1.2em;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .row .col50 {
+        width: 100%;
+    }
+    .row .col50 .imgBx {
+        height: 300px;
+        margin-top: 20px;
+    }
+    .menu .content {
+        margin-top: 20px;
+    }
+    .menu .content .box {
+        margin: 10px;
+    }
+    .menu .content .box .imgBx {
+        height: 260px;
+    }
+    .titleText {
+        text-align: center;
+    }
+    .title {
+        text-align: center;
+    }
+    .contact .imgBx {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .contact .content {
+        width: 100%;
+        z-index: 1;
+    }
+    .contact .content .contentBx {
+        width: 100%;
+        padding: 40px;
+        margin: 50px;
+        background: rgba(255, 255, 255, .9);
+    }
+    .contact .content .contentBx .itemBx .img {
+        border: 4px solid rgba(255, 255, 255, .9);
+    }
+    .copy .content {
+        flex-wrap: wrap-reverse;
+    }
+    .copy .content .box .social {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width:480px) {
+    p {
+        font-size: 1em;
+    }
+    .banner .content h2 {
+        font-size: 2.2em;
+    }
+    .banner .content p {
+        font-size: 1em;
+    }
+    header .logo {
+        font-weight: 600;
+        font-size: 1.2em;
+    }
+    .contact .content .contentBx {
+        width: 100%;
+        padding: 10px;
+        margin: 10px;
+    }
+    .contact .content .contentBx .itemBx .img {
+        width: 45px;
+        height: 45px;
+    }
+    .contact .content .contentBx .itemBx a {
+        padding: 2px;
+        left: 45px;
+        font-size: 1em;
+    }
+    .contact .content .contentBx .sci li {
+        width: 40px;
+        height: 40px;
+    }
+    .copy .content .box .imgBx {
+        margin-top: 10px;
+    }
+}
