@@ -8,6 +8,10 @@
 
 :root {
     /* Colores */
+    --color-border: #cdcdcd;
+    --color-primary: #ff3c00;
+    --color-secundary: #2681db;
+    --color-title: #923215;
 }
 
 
@@ -19,16 +23,23 @@ body {
 }
 /* Cabecera */
 .header {
+    position: relative;
     width: 100%;
     height: 90px;
     padding: 20px 30px;
-}
+    border-bottom: 1px solid var(--color-border);
 
-.header p {
-    font-size: 1.2em;
+    p {
+        font-size: 1.2em;
+    }
+
+    .menu-btn {
+        display: none;
+    }
 }
 /* Contenedor */
 .container {
+    position: relative;
     width: 100%;
     height: calc(100vh - 90px);
     overflow: hidden;
@@ -63,7 +74,8 @@ body {
 }
 
 .menu .btn.active {
-    border: 1px solid #ff3c00;
+    border: 1px solid var(--color-primary);
+    background: #fff;
 }
 /* Footer */
 .footer {
@@ -72,8 +84,6 @@ body {
     left: 0;
     width: 90%;
     height: 80px;
-    border: 1px solid #000;
-    border-radius: 10px;
     padding: 10px;
 }
 
@@ -83,7 +93,7 @@ body {
     justify-content: center;
     font-weight: 900;
     padding-bottom: 5px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .footer .logo img {
@@ -95,7 +105,7 @@ body {
     text-align: center;
     font-weight: 300;
     margin-top: 5px;
-    color: #364ab3;
+    color: var(--color-secundary);
 }
 /* componentes */
 .componentes {
@@ -128,7 +138,7 @@ body {
 }
 
 .componentes .componente h2 span {
-    color: #923215;
+    color: var(--color-title);
 }
 /**/
 .componente h3 {
@@ -141,7 +151,7 @@ body {
     display: block;
     width: 5px;
     height: 25px;
-    background: #364ab3;
+    background: var(--color-secundary);
     margin-right: 5px;
     border-radius: 5px;
 }
@@ -176,4 +186,57 @@ body {
 .bloqueImg .contenido img {
     width: 300px;
     border-radius: 5px;
+}
+
+/* Diseño responsivo */
+@media only screen and (max-width:480px) {
+
+    .header {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        padding: 0 10px;
+
+        p {
+            font-size: 16px;
+        }
+        
+        .menu-btn {
+            display: block;
+            font-size: 2.2em;
+            padding-right: 10px;
+            border-right: 1px solid var(--color-border);
+            
+            &::after {
+                content: "\e5d2";
+            }
+
+            &.active::after {
+                content: "\e5cd";
+                opacity: 1;
+            }
+        }
+    }
+
+    .container {
+        height: calc(100dvh - 90px);
+        padding: 0;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu.active {
+        position: absolute;
+        display: block;
+        width: 70%;
+        height: 100%;
+        background: #fff;
+        border-right: 1px solid var(--color-border);
+    }
+
+    .componentes {
+        width: 100%;
+    }
 }

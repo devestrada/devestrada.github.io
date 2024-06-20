@@ -1,3 +1,20 @@
+//Menu responsivo
+const buttonMenu = document.querySelector(".menu-btn");
+const toggleMenu = document.querySelector(".menu");
+
+buttonMenu.addEventListener("click", () => {
+  toggleMenu.classList.toggle("active");
+  buttonMenu.classList.toggle("active");
+});
+
+const bgComponentes = document.querySelector(".componentes");
+
+bgComponentes.addEventListener("click", ()=> {
+  toggleMenu.classList.remove("active");
+  buttonMenu.classList.remove("active");
+})
+
+//Cambios de pestañas dentro de la web
 const btns = document.querySelectorAll("[data-target-tab]");
 
 btns.forEach((btn) => {
@@ -8,6 +25,10 @@ btns.forEach((btn) => {
 
     items.forEach((item) => item.classList.remove("active"));
     btn.classList.add("active");
+    //Menu responsivo
+    toggleMenu.classList.remove("active");
+    buttonMenu.classList.remove("active");
+
     document.querySelector(btn.dataset.targetTab).classList.add("active");
   });
 });
