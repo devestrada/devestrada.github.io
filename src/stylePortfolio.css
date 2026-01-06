@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;300;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --font1: 'Barlow', sans-serif;
+    --font2: 'Geologica', sans-serif;
+}
+
+body {
+    font-family: var(--font1);
+}
+
+/* Cabecera */
+.cabecera {
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffdaa6;
+    overflow: hidden;
+
+    .descripcion {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        padding: 5em;
+
+        img {
+            width: 500px;
+        }
+
+        a {
+            display: inline-block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #0783c2;
+            transition: .2s;
+
+            &:hover {
+                color: #054362;
+            }
+        }
+
+        .texto {
+            font-size: 1.4em;
+            font-weight: 500;
+            margin-bottom: 1.5em;
+        }
+
+        .trabajo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1em;
+
+            ion-icon {
+                font-size: 2.3em;
+                margin-right: 10px;
+            }
+
+            p {
+                font-size: 1.1em;
+            }
+        }
+
+        .contacto {
+            width: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2em;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 5px 0 #111;
+
+            ion-icon {
+                font-size: 2em;
+                margin-right: 10px;
+            }
+
+            p {
+                font-size: 1.2em;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .habilidades {
+        position: relative;
+        width: 40%;
+        height: 100%;
+        margin-top: 200px;
+        padding: 1.2em 2em;
+        background: #fff;
+        border-radius: 30px 0 0 0;
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .icono {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1em;
+            border: 2px solid #111;
+            border-radius: 10px;
+            box-shadow: 0 5px 0 #111;
+            padding: 1em;
+
+            .i {
+                width: 70px;
+                font-size: 2.3em;
+                color: var(--iconColor);
+            }
+
+            .texto {
+                font-size: 1.1em;
+
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: -40px;
+            right: 0;
+            background: transparent;
+            box-shadow: 15px 18px #fff;
+            border-radius: 50%;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            bottom: 100px;
+            left: -40px;
+            background: transparent;
+            box-shadow: 15px 15px #fff;
+            border-radius: 50%;
+        }
+    }
+}
+
+.proyectos {
+    padding: 2em 5em;
+
+    h2 {
+        font-size: 1.5em;
+        font-weight: 800;
+    }
+
+    p {
+        font-size: 1.1em;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        iframe {
+            border-radius: 10px;
+            border: 2px solid #111;
+            box-shadow: 0 5px 0 #111;
+        }
+    }
+}
+
+/*Diseño Responsivo*/
+@media only screen and (max-width:480px) {
+
+    .cabecera {
+        flex-direction: column;
+        height: auto;
+
+        .descripcion {
+            width: 100%;
+            padding: 1.2em;
+
+            img {
+                width: 70%;
+            }
+
+            .texto {
+                font-size: 1.2em;
+            }
+        }
+
+        .habilidades {
+            width: 90%;
+            padding: 1.2em;
+            border-radius: 20px;
+            margin: 20px 0;
+
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    .proyectos {
+        padding: 1.2em;
+    }
+}
